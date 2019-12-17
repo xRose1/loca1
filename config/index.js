@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+var mongoose = require('mongoose');
 
 const configdir = process.env.LOCA_CONFIG_DIR || process.env.CONFIG_DIR || path.join(__dirname, '..', 'config');
 const website = JSON.parse(fs.readFileSync(path.join(configdir, 'website.json'), 'utf8'));
