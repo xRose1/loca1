@@ -1,6 +1,5 @@
 const path = require('path');
 const fs = require('fs');
-var mongoose = require('mongoose');
 
 const configdir = process.env.LOCA_CONFIG_DIR || process.env.CONFIG_DIR || path.join(__dirname, '..', 'config');
 const website = JSON.parse(fs.readFileSync(path.join(configdir, 'website.json'), 'utf8'));
@@ -20,6 +19,6 @@ module.exports = Object.assign(website, {
     productive: process.env.NODE_ENV === 'production',
     subscription,
     demomode,
-    database: process.env.LOCA_DBNAME || process.env.BASE_DB_URL || mongoose.connect('mongodb://localhost:27017/demodb', {useNewUrlParser: true}),
+    database: process.env.LOCA_DBNAME || process.env.BASE_DB_URL || 'mongodb://localhost:27017/demodb',
     EMAILER_URL: process.env.EMAILER_URL ||'http://localhost:8083/emailer',
 });
