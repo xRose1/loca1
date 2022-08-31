@@ -46,7 +46,7 @@
     "method-override": "3.0.0",
     "minivents": "2.2.0",
     "moment": "2.24.0",
-    "moment-timezone": "0.5.23",
+    "moment-timezone": "0.5.35",
     "mongobackup": "0.3.5",
     "mongojs": "2.6.0",
     "passport": "0.4.0",
